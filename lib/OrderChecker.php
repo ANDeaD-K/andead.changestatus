@@ -12,16 +12,14 @@ class OrderChecker
 
     public static function CheckOrders()
     {
-        $agentChangeHour = Option::get(self::$MODULE_ID, 'AGENT_CHANGE_HOUR');
         $orderCheckCount = Option::get(self::$MODULE_ID, 'ORDER_CHECK_COUNT');
         $orderDateUpdate = Option::get(self::$MODULE_ID, 'ORDER_DATE_UPDATE');
         $orderStopPayed = Option::get(self::$MODULE_ID, 'ORDER_STOP_PAYED');
         $orderStopCanceled = Option::get(self::$MODULE_ID, 'ORDER_STOP_CANCELED');
 
-		if (date('H') == $agentChangeHour) {
-			if (Loader::includeModule('sale')) {
-				
-				for ($i = 1; $i <= 4; $i++) {
+		if (Loader::includeModule('sale')) {
+			for ($i = 1; $i <= 4; $i++) {
+				if (date('H') == Option::get(self::$MODULE_ID, 'AGENT_CHANGE_HOUR_'.$i)) {
 					if (!empty(Option::get(self::$MODULE_ID, 'ORDER_CHANGE_STATUS_'.$i))) {
 						$arFilter = [];
 						$arFilter['STATUS_ID'] = Option::get(self::$MODULE_ID, 'ORDER_CHANGE_STATUS_'.$i);

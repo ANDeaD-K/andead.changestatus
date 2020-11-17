@@ -81,13 +81,6 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
 	
 	$arOptions = [
         'AgentOptions' => [
-            'AGENT_CHANGE_HOUR' => [
-                'TYPE' => 'number',
-                'DEFAULT' => '18',
-                'DESCRIPTION' => 'Час смены статуса',
-                'HINT' => '',
-                'HEADING' => '',
-            ],
             'ORDER_CHECK_COUNT' => [
                 'TYPE' => 'number',
                 'DEFAULT' => '10',
@@ -95,12 +88,19 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'AGENT_CHANGE_HOUR_1' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 1',
+            ],
 			'ORDER_CHANGE_STATUS_1' => [
                 'TYPE' => 'select_status',
                 'DEFAULT' => '',
                 'DESCRIPTION' => 'При статусе заказа',
                 'HINT' => '',
-                'HEADING' => 'Смена статуса 1',
+                'HEADING' => '',
             ],
             'ORDER_CHANGE_STATUS_TO_1' => [
                 'TYPE' => 'select_status',
@@ -109,12 +109,19 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'AGENT_CHANGE_HOUR_2' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 2',
+            ],
 			'ORDER_CHANGE_STATUS_2' => [
                 'TYPE' => 'select_status',
                 'DEFAULT' => '',
                 'DESCRIPTION' => 'При статусе заказа',
                 'HINT' => '',
-                'HEADING' => 'Смена статуса 2',
+                'HEADING' => '',
             ],
             'ORDER_CHANGE_STATUS_TO_2' => [
                 'TYPE' => 'select_status',
@@ -123,12 +130,19 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'AGENT_CHANGE_HOUR_3' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 3',
+            ],
 			'ORDER_CHANGE_STATUS_3' => [
                 'TYPE' => 'select_status',
                 'DEFAULT' => '',
                 'DESCRIPTION' => 'При статусе заказа',
                 'HINT' => '',
-                'HEADING' => 'Смена статуса 3',
+                'HEADING' => '',
             ],
             'ORDER_CHANGE_STATUS_TO_3' => [
                 'TYPE' => 'select_status',
@@ -137,12 +151,19 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'AGENT_CHANGE_HOUR_4' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 4',
+            ],
 			'ORDER_CHANGE_STATUS_4' => [
                 'TYPE' => 'select_status',
                 'DEFAULT' => '',
                 'DESCRIPTION' => 'При статусе заказа',
                 'HINT' => '',
-                'HEADING' => 'Смена статуса 4',
+                'HEADING' => '',
             ],
             'ORDER_CHANGE_STATUS_TO_4' => [
                 'TYPE' => 'select_status',
@@ -186,14 +207,17 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
     if ($request->isPost()) {
         if ((!empty($request->getPost('save')) || !empty($request->getPost('restore'))) && check_bitrix_sessid()) {
             if (!empty($request->getPost('restore'))) {
-                Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR', 18);
                 Option::set($MODULE_ID, 'ORDER_CHECK_COUNT', 10);
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_1', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_1', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_1', '');
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_2', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_2', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_2', '');
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_3', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_3', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_3', '');
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_4', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_4', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_4', '');
                 Option::set($MODULE_ID, 'ORDER_DATE_UPDATE', '');
