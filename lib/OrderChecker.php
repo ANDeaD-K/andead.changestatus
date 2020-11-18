@@ -13,7 +13,6 @@ class OrderChecker
     public static function CheckOrders()
     {
         $orderCheckCount = Option::get(self::$MODULE_ID, 'ORDER_CHECK_COUNT');
-        $orderDateUpdate = Option::get(self::$MODULE_ID, 'ORDER_DATE_UPDATE');
         $orderStopPayed = Option::get(self::$MODULE_ID, 'ORDER_STOP_PAYED');
         $orderStopCanceled = Option::get(self::$MODULE_ID, 'ORDER_STOP_CANCELED');
 
@@ -24,8 +23,8 @@ class OrderChecker
 						$arFilter = [];
 						$arFilter['STATUS_ID'] = Option::get(self::$MODULE_ID, 'ORDER_CHANGE_STATUS_'.$i);
 
-						if (!empty($orderDateUpdate)) {
-							$arFilter['<=DATE_UPDATE'] = date('d.m.Y H:i:s', time() - ($orderDateUpdate * 60));
+						if (!empty(Option::get(self::$MODULE_ID, 'ORDER_DATE_UPDATE_'.$i))) {
+							$arFilter['<=DATE_UPDATE'] = date('d.m.Y H:i:s', time() - (Option::get(self::$MODULE_ID, 'ORDER_DATE_UPDATE_'.$i) * 60));
 						}
 
 						if ($orderStopPayed == 'Y') {
