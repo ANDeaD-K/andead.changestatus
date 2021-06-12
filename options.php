@@ -116,6 +116,13 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'LATEST_DATE_ENABLED_1' => [
+                'TYPE' => 'hidden',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
 			'AGENT_CHANGE_HOUR_2' => [
                 'TYPE' => 'number',
                 'DEFAULT' => '18',
@@ -141,6 +148,13 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'TYPE' => 'number',
                 'DEFAULT' => '',
                 'DESCRIPTION' => 'Проверять заказы, если с даты последнего обновления заказа прошло больше (мин.)',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'LATEST_DATE_ENABLED_2' => [
+                'TYPE' => 'hidden',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
                 'HINT' => '',
                 'HEADING' => '',
             ],
@@ -172,6 +186,13 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'LATEST_DATE_ENABLED_3' => [
+                'TYPE' => 'hidden',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
 			'AGENT_CHANGE_HOUR_4' => [
                 'TYPE' => 'number',
                 'DEFAULT' => '18',
@@ -200,6 +221,155 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                 'HINT' => '',
                 'HEADING' => '',
             ],
+			'LATEST_DATE_ENABLED_4' => [
+                'TYPE' => 'hidden',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			
+			'AGENT_CHANGE_HOUR_5' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 5',
+            ],
+			'ORDER_CHANGE_STATUS_5' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'При статусе заказа',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+            'ORDER_CHANGE_STATUS_TO_5' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Сменить статус заказа на',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'ORDER_DATE_UPDATE_5' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять заказы, если с даты последнего обновления заказа прошло больше (мин.)',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'LATEST_DATE_ENABLED_5' => [
+                'TYPE' => 'checkbox',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'AGENT_CHANGE_HOUR_6' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 6',
+            ],
+			'ORDER_CHANGE_STATUS_6' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'При статусе заказа',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+            'ORDER_CHANGE_STATUS_TO_6' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Сменить статус заказа на',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'ORDER_DATE_UPDATE_6' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять заказы, если с даты последнего обновления заказа прошло больше (мин.)',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'LATEST_DATE_ENABLED_6' => [
+                'TYPE' => 'checkbox',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'AGENT_CHANGE_HOUR_7' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 7',
+            ],
+			'ORDER_CHANGE_STATUS_7' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'При статусе заказа',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+            'ORDER_CHANGE_STATUS_TO_7' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Сменить статус заказа на',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'ORDER_DATE_UPDATE_7' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять заказы, если с даты последнего обновления заказа прошло больше (мин.)',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'LATEST_DATE_ENABLED_7' => [
+                'TYPE' => 'checkbox',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'AGENT_CHANGE_HOUR_8' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '18',
+                'DESCRIPTION' => 'Час смены статуса',
+                'HINT' => '',
+                'HEADING' => 'Смена статуса 8',
+            ],
+			'ORDER_CHANGE_STATUS_8' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'При статусе заказа',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+            'ORDER_CHANGE_STATUS_TO_8' => [
+                'TYPE' => 'select_status',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Сменить статус заказа на',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'ORDER_DATE_UPDATE_8' => [
+                'TYPE' => 'number',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять заказы, если с даты последнего обновления заказа прошло больше (мин.)',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			'LATEST_DATE_ENABLED_8' => [
+                'TYPE' => 'checkbox',
+                'DEFAULT' => '',
+                'DESCRIPTION' => 'Проверять самую позднюю дату',
+                'HINT' => '',
+                'HEADING' => '',
+            ],
+			
             'ORDER_STOP_PAYED' => [
                 'TYPE' => 'checkbox',
                 'DEFAULT' => '',
@@ -233,18 +403,44 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_1', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_1', '');
 				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_1', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_1', 'N');
 				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_2', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_2', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_2', '');
 				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_2', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_2', 'N');
 				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_3', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_3', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_3', '');
 				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_3', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_3', 'N');
 				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_4', 18);
 				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_4', '');
                 Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_4', '');
 				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_4', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_4', 'N');
+				
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_5', 18);
+				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_5', '');
+                Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_5', '');
+				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_5', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_5', 'N');
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_6', 18);
+				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_6', '');
+                Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_6', '');
+				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_6', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_6', 'N');
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_7', 18);
+				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_7', '');
+                Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_7', '');
+				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_7', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_7', 'N');
+				Option::set($MODULE_ID, 'AGENT_CHANGE_HOUR_8', 18);
+				Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_8', '');
+                Option::set($MODULE_ID, 'ORDER_CHANGE_STATUS_TO_8', '');
+				Option::set($MODULE_ID, 'ORDER_DATE_UPDATE_8', 0);
+				Option::set($MODULE_ID, 'LATEST_DATE_ENABLED_8', 'N');
+				
                 Option::set($MODULE_ID, 'ORDER_STOP_PAYED', 'Y');
                 Option::set($MODULE_ID, 'ORDER_STOP_CANCELED', 'Y');
 
@@ -299,7 +495,9 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
 			
             <tr>
                 <td width="40%">
-                    <label for=""><?= $v['DESCRIPTION'] ?></label>
+					<? if ($v['TYPE'] != 'hidden'): ?>
+						<label for=""><?= $v['DESCRIPTION'] ?></label>
+					<? endif; ?>
                 </td>
                 <td width="60%">
 					<? if ($v['TYPE'] == 'checkbox'): ?>
@@ -316,6 +514,8 @@ if ($USER->IsAdmin() || Loader::includeModule($MODULE_ID)) {
                     <? elseif ($v['TYPE'] == 'number'): ?>
                         <input type="<?= $v['TYPE'] ?>" size="35" min="1" max="1000000" name="<?= $code ?>"
                                id="<?= $code ?>" value="<?= Option::get($MODULE_ID, $code) ?>">
+					<? elseif ($v['TYPE'] == 'hidden'): ?>
+                        <input type="<?= $v['TYPE'] ?>" type="checkbox" name="<?= $code ?>" id="<?= $code ?>" value="N">
                     <? else: ?>
                         <input type="<?= $v['TYPE'] ?>" size="35" name="<?= $code ?>" id="<?= $code ?>"
                                value="<?= Option::get($MODULE_ID, $code) ?>">

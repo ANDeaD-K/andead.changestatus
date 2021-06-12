@@ -17,11 +17,17 @@ class OrderChecker
         $orderStopCanceled = Option::get(self::$MODULE_ID, 'ORDER_STOP_CANCELED');
 
 		if (Loader::includeModule('sale')) {
-			for ($i = 1; $i <= 4; $i++) {
+			for ($i = 1; $i <= 8; $i++) {
 				if (date('H') == Option::get(self::$MODULE_ID, 'AGENT_CHANGE_HOUR_'.$i)) {
 					if (!empty(Option::get(self::$MODULE_ID, 'ORDER_CHANGE_STATUS_'.$i))) {
+						
 						$arFilter = [];
 						$arFilter['STATUS_ID'] = Option::get(self::$MODULE_ID, 'ORDER_CHANGE_STATUS_'.$i);
+						
+						if (Option::get(self::$MODULE_ID, 'LATEST_DATE_ENABLED_'.$i) == 'Y') {
+							$arFilter['=SALE_INTERNALS_ORDER_PROPERTY_CODE'] = 'LATEST_DATE';
+							$arFilter['=SALE_INTERNALS_ORDER_PROPERTY_VALUE'] = date('d.m.Y');
+						}
 
 						if (!empty(Option::get(self::$MODULE_ID, 'ORDER_DATE_UPDATE_'.$i))) {
 							$arFilter['<=DATE_UPDATE'] = date('d.m.Y H:i:s', time() - (Option::get(self::$MODULE_ID, 'ORDER_DATE_UPDATE_'.$i) * 60));
@@ -36,10 +42,19 @@ class OrderChecker
 						}
 
 						$arRes = Order::getList([
-							'select' => ['ID', 'CANCELED'],
+							'select' => ['ID', 'CANCELED', 'PROPERTY'],
 							'filter' => $arFilter,
 							'order' => ['DATE_UPDATE' => 'ASC'],
 							'limit' => $orderCheckCount,
+							'runtime' => [
+								new \Bitrix\Main\Entity\ReferenceField(
+									'PROPERTY',
+									'\Bitrix\Sale\Internals\OrderPropsValueTable',
+									[
+										'=this.ID' => 'ref.ORDER_ID',
+									]
+								)
+							]
 						])->fetchAll();
 
 						if (!empty($arRes)) {
